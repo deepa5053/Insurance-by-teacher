@@ -73,6 +73,7 @@ p {
     justify-content: center;
     align-items: center;
     background-color: #F17949;
+    min-height: 15rem;
 }
 
 .join {
@@ -82,6 +83,7 @@ p {
     justify-content: center;
     align-items: center;
     background-color: #FAB131;
+    min-height: 15rem;
 }
 
 .join-button {
@@ -129,7 +131,7 @@ p {
 
 .info__text {
     max-width: 420px;
-    padding: 5rem;
+    
 }
 
 .cards {
@@ -137,6 +139,7 @@ p {
     display: flex;
     justify-content: center;
     background-color: #FAB131;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -220,6 +223,7 @@ p {
     grid-area: how;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+
 }
 
 .how__box {
@@ -270,4 +274,28 @@ p {
     grid-area: footer;
     min-height: 20rem;
     background-color: gray;
+}
+
+@media screen and (max-width:760px) {
+    .wrapper{
+    grid-template-columns: 100%;
+    grid-template-areas:
+    "welcome "
+    "learn"
+    "join"
+    "navigation"
+    "info"
+    "cards"
+    "about"
+    "how"
+    "up"
+    "footer" 
+     ;
+    }
+    .info{
+        flex-direction: column;
+    }
+    .how{
+        grid-template-columns: 100%;
+    }
 }
